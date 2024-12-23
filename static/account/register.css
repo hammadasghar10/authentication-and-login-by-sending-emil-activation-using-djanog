@@ -1,0 +1,84 @@
+/* General reset and body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form container */
+form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+/* Labels */
+form label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+/* Inputs */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Focus state for inputs */
+form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+/* Button styling */
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover state */
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Small adjustments for mobile devices */
+@media (max-width: 480px) {
+    form {
+        padding: 15px;
+    }
+
+    form label {
+        font-size: 13px;
+    }
+
+    form input,
+    form button {
+        font-size: 14px;
+    }
+}
