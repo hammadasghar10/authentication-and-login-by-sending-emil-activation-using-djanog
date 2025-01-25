@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm,PasswordChangeForm,SetPasswordForm
 from django.contrib.auth import login,authenticate,logout
 from account.froms import Registerform,LoginForm
 from account.models import User
@@ -71,7 +71,7 @@ def login_view(request):
                 if user.is_seller:
                  return redirect('seller_dashboard')
                 elif user.is_customer:
-                 return redirect('customer_dashboard')
+                 return redirect(f'/customer/{user.name}/')
             else:
                 messages.error(request, "Invalid email or password.")
         else:
@@ -81,7 +81,7 @@ def login_view(request):
  
     return render(request, 'account/login.html', {'form': form})
 
-def user_logout(request):
-    if request.user.is_authenticated:
-        logout(request)
-    return redirect('user_login')
+# def user_logout(request):
+#     if request.user.is_authenticated:
+#         logout(request)
+#     return redirect('user_login')

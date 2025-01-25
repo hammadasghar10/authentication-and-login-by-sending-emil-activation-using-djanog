@@ -5,4 +5,5 @@
 {% block content %}
    <h1> {{request.user.name}} you are login as a seller</h1>
    <a href="{% url "user_logout" %}">logout</a>
+   {% comment %} <a href="{% url "change_password" %}">Change Password</a> {% endcomment %}
 {% endblock content %}

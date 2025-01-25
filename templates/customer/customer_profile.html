@@ -4,5 +4,6 @@
 {% endblock title %}
 {% block content %}
    <h1> {{request.user.name}}you are login as a customer</h1>
-   <a href="{% url "user_logout" %}"></a>
+   <a href="{% url "user_logout" %}">logout</a>
+   <a href="{% url "change_password"  request.user.id %}">Change Password</a>
 {% endblock content %}
